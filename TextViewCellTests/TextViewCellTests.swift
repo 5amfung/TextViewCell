@@ -1,10 +1,3 @@
-//
-//  TextViewCellTests.swift
-//  TextViewCellTests
-//
-//  Created by bbpan on 3/22/15.
-//  Copyright (c) 2015 bbpan. All rights reserved.
-//
 
 import UIKit
 import XCTest
