@@ -14,7 +14,7 @@ class MyTableViewController : UITableViewController, TextViewCellDelegate {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
 
-        self.data = ["Cell 1", "Cell 2"]
+        self.data = ["Cell 1", "Cell 2", "Cell 3", "Cell 4", "Cell 5", "Cell 6", "Cell 7", "Cell 8"]
 
     }
 
@@ -30,7 +30,13 @@ class MyTableViewController : UITableViewController, TextViewCellDelegate {
     }
 
     func textViewCell(cell: TextViewCell, didChangeText text: String) {
-        NSLog("\(text)")
-    }
+        let size = cell.textView.frame.size
+        let newSize = cell.textView.sizeThatFits(CGSizeMake(size.width, CGFloat.max))
 
+        if size.height != newSize.height {
+            cell.textView.frame.size = newSize
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+    }
 }
