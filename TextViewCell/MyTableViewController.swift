@@ -34,9 +34,16 @@ class MyTableViewController : UITableViewController, TextViewCellDelegate {
         let newSize = cell.textView.sizeThatFits(CGSizeMake(size.width, CGFloat.max))
 
         if size.height != newSize.height {
+//            UIView.setAnimationsEnabled(false)
             cell.textView.frame.size = newSize
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
+//            UIView.setAnimationsEnabled(true)
+
+//            let indexPath = self.tableView.indexPathForCell(cell)
+//            if let indexPath_ = indexPath {
+//                self.tableView .scrollToRowAtIndexPath(indexPath_, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
+//            }
         }
     }
 }
