@@ -12,10 +12,8 @@ class MyTableViewController : UITableViewController, TextViewCellDelegate {
 
         self.tableView.estimatedRowHeight = 40
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
 
         self.data = ["Cell 1", "Cell 2", "Cell 3", "Cell 4", "Cell 5", "Cell 6", "Cell 7", "Cell 8"]
-
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
